@@ -5,9 +5,7 @@ import creature.skills.Skills;
 
 import java.util.List;
 
-import static java.lang.Math.abs;
-
-public abstract class Creature {
+public abstract class Creature implements Comparable<Creature> {
 
     protected String name;
     protected int lifePoint;
@@ -53,6 +51,7 @@ public abstract class Creature {
             this.lifePoint = 0;
         }
     }
+
 
     public String toString() {
         return this.name + " à maintenant " + this.lifePoint + " point de vie et " + armor + " d'armure";
@@ -107,5 +106,14 @@ public abstract class Creature {
 
     public void setSkills(List<Skills> skills) {
         this.skills = skills;
+    }
+
+    public int compareTo(Creature creature) {
+        if (this.getDamage() > creature.getDamage()) {
+            return 1;
+        } else if (this.getDamage() < creature.getDamage()) {
+            return -1;
+        }
+        return 0;
     }
 }
