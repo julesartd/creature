@@ -1,7 +1,7 @@
-package creature.heal;
+package fight_game.heal;
 
-import creature.Creature;
-import creature.skills.Skills;
+import fight_game.creature.Creature;
+import fight_game.skills.Skills;
 
 public abstract class Heal extends Skills {
 

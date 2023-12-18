@@ -1,10 +1,11 @@
-package creature;
+package fight_game;
 
-import creature.boost.items.Creatine;
-import creature.damage.items.Poison;
-import creature.heal.items.Bandage;
-import creature.items.Cat;
-import creature.items.Dragon;
+import fight_game.boost.items.Creatine;
+import fight_game.creature.Creature;
+import fight_game.damage.items.Poison;
+import fight_game.heal.items.Bandage;
+import fight_game.items.Cat;
+import fight_game.items.Dragon;
 
 import java.util.List;
 import java.util.Scanner;

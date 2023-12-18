@@ -1,8 +1,8 @@
-package creature.boost;
+package fight_game.boost;
 
-import creature.Creature;
-import creature.others.Type;
-import creature.skills.Skills;
+import fight_game.creature.Creature;
+import fight_game.others.Type;
+import fight_game.skills.Skills;
 
 public abstract class Boost extends Skills {
     private final float multiplicator;

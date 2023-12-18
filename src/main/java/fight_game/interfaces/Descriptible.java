@@ -1,4 +1,4 @@
-package creature.interfaces;
+package fight_game.interfaces;
 
 public interface Descriptible {
 

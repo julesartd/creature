@@ -1,7 +1,7 @@
-package creature.reduction.items;
+package fight_game.reduction.items;
 
-import creature.others.Type;
-import creature.reduction.Reduction;
+import fight_game.others.Type;
+import fight_game.reduction.Reduction;
 
 
 public class Promo extends Reduction {

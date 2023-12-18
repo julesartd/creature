@@ -1,6 +1,6 @@
-package creature.damage.items;
+package fight_game.damage.items;
 
-import creature.damage.Damage;
+import fight_game.damage.Damage;
 
 public class Poison extends Damage {
 

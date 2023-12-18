@@ -1,6 +1,6 @@
-package creature.items;
+package fight_game.items;
 
-import creature.Creature;
+import fight_game.creature.Creature;
 
 public class Cat extends Creature {
 

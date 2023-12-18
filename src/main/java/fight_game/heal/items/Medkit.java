@@ -1,6 +1,6 @@
-package creature.heal.items;
+package fight_game.heal.items;
 
-import creature.heal.Heal;
+import fight_game.heal.Heal;
 
 
 public class Medkit extends Heal {

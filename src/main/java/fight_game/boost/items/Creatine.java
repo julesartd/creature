@@ -1,7 +1,7 @@
-package creature.boost.items;
+package fight_game.boost.items;
 
-import creature.others.Type;
-import creature.boost.Boost;
+import fight_game.others.Type;
+import fight_game.boost.Boost;
 
 public class Creatine extends Boost {
 

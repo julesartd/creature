@@ -1,7 +1,7 @@
-package creature.skills;
+package fight_game.skills;
 
-import creature.Creature;
-import creature.interfaces.Descriptible;
+import fight_game.creature.Creature;
+import fight_game.interfaces.Descriptible;
 
 public abstract class Skills implements Descriptible {
 
