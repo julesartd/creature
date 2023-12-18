@@ -1,8 +1,6 @@
 package creature;
 
-public class Type {
-
-    public enum TypePropriete {
-        ARMOR, DAMAGE, HEAL
-    }
+public enum Type {
+    ARMOR, DAMAGE, HEAL
 }
+

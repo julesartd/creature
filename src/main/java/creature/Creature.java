@@ -37,6 +37,7 @@ public abstract class Creature {
                 creature.setArmor(0);
             }
         }
+        System.out.println(creature.getName() + " a subit " + this.damage + " points de dégâts");
     }
 
 

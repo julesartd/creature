@@ -4,26 +4,37 @@ import creature.Creature;
 import creature.Type;
 import creature.reduction.Reduction;
 
-import static creature.Type.TypePropriete.DAMAGE;
 
 public class Promo extends Reduction {
     private final double demultiplicateur = 0.6;
+    private final int maxUses = 1;
 
     public Promo(int maxUses, double demultiplicateur, Type propriete) {
         super(maxUses, demultiplicateur, propriete);
     }
 
-    public void use(Creature attacker, Creature defender) {
+    public void use(Creature attacker, Creature enemy) {
         switch (getPropriete()) {
-            case DAMAGE -> {
-                if (attacker.getDamage() - demultiplicateur > 0) {
-                    attacker.setDamage(attacker.getDamage() - demultiplicateur);
-                    System.out.println("Vous avez réduit les dégâts de l'adversaire de " + demultiplicateur + " points.");
-                } else {
-                    System.out.println("Vous avez réduit les dégâts de l'adversaire de " + attacker.getDamage() + " points.");
-                    attacker.setDamage(0);
+            case DAMAGE:
+                enemy.setDamage((int) (enemy.getDamage() * this.demultiplicateur));
+                break;
+            case ARMOR:
+                if (enemy.getArmor() > 0) {
+                    enemy.setArmor((int) (enemy.getArmor() * this.demultiplicateur));
                 }
-            }
+
+                break;
+            case HEAL:
+                if (enemy.getLifePoint() > 0) {
+                    enemy.setLifePoint((int) (enemy.getLifePoint() * this.demultiplicateur));
+                }
+
+                break;
+            default:
+                // Handle invalid property type
+                break;
         }
     }
+
 }
+
