@@ -1,6 +1,6 @@
 package creature.reduction.items;
 
-import creature.Type;
+import creature.others.Type;
 import creature.reduction.Reduction;
 
 

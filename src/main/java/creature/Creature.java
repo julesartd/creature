@@ -1,11 +1,12 @@
 package creature;
 
 
+import creature.interfaces.Descriptible;
 import creature.skills.Skills;
 
 import java.util.List;
 
-public abstract class Creature implements Comparable<Creature> {
+public abstract class Creature implements Comparable<Creature>, Descriptible {
 
     protected String name;
     protected int lifePoint;
@@ -54,7 +55,7 @@ public abstract class Creature implements Comparable<Creature> {
 
 
     public String toString() {
-        return this.name + " à maintenant " + this.lifePoint + " point de vie et " + armor + " d'armure";
+        return "Bonjour, je m'appelle " + this.name + " je suis un " + this.getClass().getSimpleName();
     }
 
 
@@ -115,5 +116,9 @@ public abstract class Creature implements Comparable<Creature> {
             return -1;
         }
         return 0;
+    }
+
+    public String describe() {
+        return this.getClass().getSimpleName() + " : " + this.getName() + " a " + this.getLifePoint() + " points de vie, " + this.getDamage() + " points de dégâts et " + this.getArmor() + " points d'armure";
     }
 }

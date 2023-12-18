@@ -1,8 +1,9 @@
 package creature.skills;
 
 import creature.Creature;
+import creature.interfaces.Descriptible;
 
-public abstract class Skills {
+public abstract class Skills implements Descriptible {
 
     protected int maxUses;
     protected String name;
@@ -29,6 +30,8 @@ public abstract class Skills {
         return this.name;
     }
 
-    ;
+    public String describe() {
+        return this.name + " (utilisations restantes : " + this.maxUses + ")" + "\n";
+    }
 
 }

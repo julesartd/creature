@@ -1,6 +1,6 @@
 package creature.boost.items;
 
-import creature.Type;
+import creature.others.Type;
 import creature.boost.Boost;
 
 public class Creatine extends Boost {

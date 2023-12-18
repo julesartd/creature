@@ -1,7 +1,7 @@
 package creature.boost;
 
 import creature.Creature;
-import creature.Type;
+import creature.others.Type;
 import creature.skills.Skills;
 
 public abstract class Boost extends Skills {
