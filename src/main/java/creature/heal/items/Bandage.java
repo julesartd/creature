@@ -25,4 +25,5 @@ public class Bandage extends Heal {
         this.setMaxUses(this.getMaxUses() - 1);
 
     }
+
 }
