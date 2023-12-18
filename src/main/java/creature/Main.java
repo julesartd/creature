@@ -20,9 +20,9 @@ public class Main {
         Cat cat = new Cat("Garfield", 100, 60, 50);
 
         // Set skills
-        Bandage bandage = new Bandage(5);
-        Poison poison = new Poison(2);
-        Creatine creatine = new Creatine(3);
+        Bandage bandage = new Bandage();
+        Poison poison = new Poison();
+        Creatine creatine = new Creatine();
 
         dragon.setSkills(List.of(bandage));
         cat.setSkills(List.of(poison, creatine));

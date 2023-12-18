@@ -4,11 +4,13 @@ import creature.Creature;
 
 public abstract class Skills {
 
-    private int maxUses;
+    protected int maxUses;
+    protected String name;
 
 
-    public Skills(int maxUses) {
+    public Skills(int maxUses, String name) {
         this.maxUses = maxUses;
+        this.name = name;
     }
 
 
@@ -23,6 +25,10 @@ public abstract class Skills {
 
     public abstract void use(Creature creature, Creature enemy);
 
-    public abstract String getName();
+    public String getName() {
+        return this.name;
+    }
+
+    ;
 
 }

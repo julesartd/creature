@@ -5,24 +5,34 @@ import creature.Type;
 import creature.skills.Skills;
 
 public abstract class Reduction extends Skills {
-    private double demultiplicateur;
-    private Type propriete;
+    private double demultiplicator;
+    private Type type;
 
-    public Reduction(int maxUses, double demultiplicateur, Type propriete) {
-        super(maxUses);
-        this.demultiplicateur = demultiplicateur;
-        this.propriete = propriete;
+    public Reduction(int maxUses, String name, double demultiplicator, Type type) {
+        super(maxUses, name);
+        this.demultiplicator = demultiplicator;
+        this.type = type;
     }
 
 
-    public abstract void use(Creature creature, Creature enemy);
-
-
-    public double getDemultiplicateur() {
-        return demultiplicateur;
+    public void use(Creature creature, Creature enemy) {
+        switch (type) {
+            case DAMAGE:
+                reduceDamage(creature);
+                break;
+            case ARMOR:
+                reduceArmor(creature);
+                break;
+            default:
+                break;
+        }
     }
 
-    public Type getPropriete() {
-        return propriete;
+    public void reduceDamage(Creature creature) {
+        creature.setDamage((int) (creature.getDamage() / demultiplicator));
+    }
+
+    public void reduceArmor(Creature creature) {
+        creature.setArmor((int) (creature.getArmor() / demultiplicator));
     }
 }
