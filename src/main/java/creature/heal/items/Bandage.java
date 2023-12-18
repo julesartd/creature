@@ -26,4 +26,9 @@ public class Bandage extends Heal {
 
     }
 
+    @Override
+    public String getName() {
+        return "Bandage";
+    }
+
 }

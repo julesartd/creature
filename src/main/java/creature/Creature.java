@@ -1,6 +1,10 @@
 package creature;
 
 
+import creature.skills.Skills;
+
+import java.util.List;
+
 import static java.lang.Math.abs;
 
 public abstract class Creature {
@@ -10,6 +14,7 @@ public abstract class Creature {
     private int damage;
     private int armor;
     private int maxLifePoint;
+    private List<Skills> skills;
 
 
     public Creature(String name, int lifePoint, int damage, int armor) {
@@ -18,6 +23,7 @@ public abstract class Creature {
         this.damage = damage;
         this.armor = armor;
         this.maxLifePoint = lifePoint;
+
     }
 
 
@@ -95,5 +101,11 @@ public abstract class Creature {
         this.maxLifePoint = maxLifePoint;
     }
 
+    public List<Skills> getSkills() {
+        return skills;
+    }
 
+    public void setSkills(List<Skills> skills) {
+        this.skills = skills;
+    }
 }

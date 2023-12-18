@@ -22,4 +22,7 @@ public abstract class Skills {
 
 
     public abstract void use(Creature creature, Creature enemy);
+
+    public abstract String getName();
+
 }

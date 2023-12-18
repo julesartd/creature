@@ -4,6 +4,7 @@ import creature.Creature;
 
 public class Dragon extends Creature {
 
+
     public Dragon(String name, int lifePoint, int damage, int armor) {
         super(name, lifePoint, damage, armor);
     }
@@ -18,4 +19,8 @@ public class Dragon extends Creature {
     public String toString() {
         return super.toString() + "\n";
     }
+
+
+
+
 }

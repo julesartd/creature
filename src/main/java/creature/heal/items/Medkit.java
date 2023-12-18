@@ -26,4 +26,9 @@ public class Medkit extends Heal {
         this.setMaxUses(this.getMaxUses() - 1);
 
     }
+
+    @Override
+    public String getName() {
+        return "Medkit";
+    }
 }

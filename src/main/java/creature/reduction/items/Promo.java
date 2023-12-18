@@ -36,5 +36,10 @@ public class Promo extends Reduction {
         }
     }
 
+    @Override
+    public String getName() {
+        return "Promo";
+    }
+
 }
 
