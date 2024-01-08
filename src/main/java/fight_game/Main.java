@@ -15,7 +15,6 @@ import fight_game.player.items.ArtificialIntelligence;
 import fight_game.player.items.Human;
 import fight_game.player.Player;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
@@ -46,44 +45,17 @@ public class Main {
         human.addCreature(eagle);
         ai.addCreature(cat);
 
-        human.getCreatures().forEach(System.out::println);
-        ai.getCreatures().forEach(System.out::println);
 
         Creature aiCreature = ai.choiceCreature();
         Creature humanCreature = human.choiceCreature();
 
-        Player joueur = human;
-        Creature creature = humanCreature;
-        Creature target = aiCreature;
 
         // Tant que l'une des deux créatures est en vie on continue le combat
         while (aiCreature.isAlive() && humanCreature.isAlive()) {
 
-            System.out.println("Tour de " + joueur.getName());
-            System.out.println("Vie de " + creature.getName() + " : " + creature.getLifePoint());
-            System.out.println("Armure de " + creature.getName() + " : " + creature.getArmor());
+            play(humanCreature, aiCreature, human);
+            play(aiCreature, humanCreature, ai);
 
-            Skill skill = new Skill(creature, target, joueur);
-            Passer pass = new Passer(creature, target, joueur);
-            Attack attack = new Attack(creature, target, joueur);
-
-            List<Action> actions = List.of(skill, pass, attack);
-            Action action = joueur.getActionChoice().choice(actions, "Choisissez une action");
-            action.execute();
-
-            // On change de joueur
-            if (joueur == human) {
-                joueur = ai;
-                creature = aiCreature;
-                target = humanCreature;
-            } else {
-                joueur = human;
-                creature = humanCreature;
-                target = aiCreature;
-            }
-
-            // Barre de séparation
-            System.out.println("--------------------------------------------------");
 
         }
 
@@ -93,6 +65,23 @@ public class Main {
         } else {
             System.out.println("Le gagnant est " + human.getName());
         }
+
+    }
+
+    public static void play(Creature creature, Creature target, Player joueur) {
+
+        System.out.println("Tour de " + joueur.getName());
+        System.out.println("Vie de " + creature.getName() + " : " + creature.getLifePoint());
+        System.out.println("Armure de " + creature.getName() + " : " + creature.getArmor());
+
+        Skill skill = new Skill(creature, target, joueur);
+        Passer pass = new Passer(creature, target, joueur);
+        Attack attack = new Attack(creature, target, joueur);
+
+        List<Action> actions = List.of(skill, pass, attack);
+        Action action = joueur.getActionChoice().choice(actions, "Choisissez une action");
+        action.execute();
+        System.out.println("--------------------------------------------------");
 
     }
 
