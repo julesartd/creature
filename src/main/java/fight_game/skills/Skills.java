@@ -1,5 +1,6 @@
 package fight_game.skills;
 
+
 import fight_game.creature.Creature;
 import fight_game.interfaces.Descriptible;
 

@@ -1,8 +1,8 @@
-package creature;
+package fight_game.creature;
 
 
-import creature.interfaces.Descriptible;
-import creature.skills.Skills;
+import fight_game.interfaces.Descriptible;
+import fight_game.skills.Skills;
 
 import java.util.List;
 
