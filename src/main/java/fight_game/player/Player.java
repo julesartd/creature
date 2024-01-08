@@ -14,5 +14,9 @@ public class Player {
     private Player() {
     }
 
+    public String toString() {
+        return "Joueur : " + this.name + "\n";
+    }
+
 
 }
