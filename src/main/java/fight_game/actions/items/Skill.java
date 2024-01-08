@@ -1,7 +1,7 @@
-package fight_game.action;
+package fight_game.actions.items;
 
+import fight_game.actions.Action;
 import fight_game.creature.Creature;
-import fight_game.choice.Choosable;
 import fight_game.player.Player;
 
 public class Skill extends Action {

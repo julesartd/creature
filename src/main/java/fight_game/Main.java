@@ -1,9 +1,9 @@
 package fight_game;
 
-import fight_game.action.Action;
-import fight_game.action.Attack;
-import fight_game.action.Passer;
-import fight_game.action.Skill;
+import fight_game.actions.Action;
+import fight_game.actions.items.Attack;
+import fight_game.actions.items.Skip;
+import fight_game.actions.items.Skill;
 import fight_game.skills.boost.items.Creatine;
 import fight_game.creature.Creature;
 import fight_game.creature.CreatureFactory;
@@ -75,7 +75,7 @@ public class Main {
         System.out.println("Armure de " + creature.getName() + " : " + creature.getArmor());
 
         Skill skill = new Skill(creature, target, joueur);
-        Passer pass = new Passer(creature, target, joueur);
+        Skip pass = new Skip(creature, target, joueur);
         Attack attack = new Attack(creature, target, joueur);
 
         List<Action> actions = List.of(skill, pass, attack);

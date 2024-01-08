@@ -1,4 +1,4 @@
-package fight_game.action;
+package fight_game.actions;
 
 import fight_game.choice.Choosable;
 import fight_game.creature.Creature;

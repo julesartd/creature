@@ -1,10 +1,9 @@
 package fight_game.player;
 
-import fight_game.choice.ConsoleChoice;
 import fight_game.creature.Creature;
 import fight_game.choice.Choice;
 import fight_game.skills.Skills;
-import fight_game.action.Action;
+import fight_game.actions.Action;
 
 import java.util.ArrayList;
 import java.util.List;
