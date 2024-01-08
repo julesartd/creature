@@ -1,4 +1,4 @@
-package fight_game.items;
+package fight_game.creature.items;
 
 import fight_game.creature.Creature;
 

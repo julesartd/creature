@@ -1,23 +1,23 @@
 package fight_game.boost;
 
 import fight_game.creature.Creature;
-import fight_game.others.Type;
+import fight_game.skills.SkillsType;
 import fight_game.skills.Skills;
 
 public abstract class Boost extends Skills {
     private final float multiplicator;
-    private final Type type;
+    private final SkillsType skillsType;
 
 
-    public Boost(int maxUses, String name, float multiplicator, Type type) {
+    public Boost(int maxUses, String name, float multiplicator, SkillsType skillsType) {
         super(maxUses, name);
         this.multiplicator = multiplicator;
-        this.type = type;
+        this.skillsType = skillsType;
     }
 
     @Override
     public void use(Creature creature, Creature enemy) {
-        switch (type) {
+        switch (skillsType) {
             case DAMAGE:
                 boostDamage(creature);
                 break;

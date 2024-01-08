@@ -1,7 +1,7 @@
 package fight_game.creature;
 
-import fight_game.items.Cat;
-import fight_game.items.Dragon;
+import fight_game.creature.items.Cat;
+import fight_game.creature.items.Dragon;
 
 public class CreatureFactory {
 

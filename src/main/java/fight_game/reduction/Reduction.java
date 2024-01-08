@@ -1,22 +1,22 @@
 package fight_game.reduction;
 
 import fight_game.creature.Creature;
-import fight_game.others.Type;
+import fight_game.skills.SkillsType;
 import fight_game.skills.Skills;
 
 public abstract class Reduction extends Skills {
     private double demultiplicator;
-    private Type type;
+    private SkillsType skillsType;
 
-    public Reduction(int maxUses, String name, double demultiplicator, Type type) {
+    public Reduction(int maxUses, String name, double demultiplicator, SkillsType skillsType) {
         super(maxUses, name);
         this.demultiplicator = demultiplicator;
-        this.type = type;
+        this.skillsType = skillsType;
     }
 
 
     public void use(Creature creature, Creature enemy) {
-        switch (type) {
+        switch (skillsType) {
             case DAMAGE:
                 reduceDamage(creature);
                 break;
