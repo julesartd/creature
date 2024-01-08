@@ -1,7 +1,7 @@
-package fight_game.reduction.items;
+package fight_game.skills.reduction.items;
 
 import fight_game.skills.SkillsType;
-import fight_game.reduction.Reduction;
+import fight_game.skills.reduction.Reduction;
 
 
 public class Promo extends Reduction {

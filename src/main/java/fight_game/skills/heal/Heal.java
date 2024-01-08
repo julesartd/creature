@@ -1,4 +1,4 @@
-package fight_game.heal;
+package fight_game.skills.heal;
 
 import fight_game.creature.Creature;
 import fight_game.skills.Skills;

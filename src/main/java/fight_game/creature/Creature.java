@@ -1,12 +1,13 @@
 package fight_game.creature;
 
 
+import fight_game.choice.Choosable;
 import fight_game.interfaces.Descriptible;
 import fight_game.skills.Skills;
 
 import java.util.List;
 
-public abstract class Creature implements Comparable<Creature>, Descriptible {
+public abstract class Creature implements Comparable<Creature>, Descriptible, Choosable {
 
     protected String name;
     protected int lifePoint;

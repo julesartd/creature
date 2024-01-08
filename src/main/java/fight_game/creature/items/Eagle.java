@@ -13,10 +13,12 @@ public class Eagle extends Creature {
         return this.lifePoint > 0;
     }
 
-
     @Override
     public String toString() {
         return super.toString() + "\n";
     }
 
+
+
 }
+

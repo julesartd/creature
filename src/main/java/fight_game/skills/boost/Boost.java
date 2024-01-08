@@ -1,4 +1,4 @@
-package fight_game.boost;
+package fight_game.skills.boost;
 
 import fight_game.creature.Creature;
 import fight_game.skills.SkillsType;

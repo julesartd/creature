@@ -9,6 +9,7 @@ public class Leopard extends Creature {
 
     public Leopard(String name, int lifePoint, int damage, int armor) {
         super(name, lifePoint, damage, armor);
+        firstLifePoint = lifePoint;
     }
 
     public String toString() {

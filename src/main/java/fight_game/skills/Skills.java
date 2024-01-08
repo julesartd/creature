@@ -2,9 +2,10 @@ package fight_game.skills;
 
 
 import fight_game.creature.Creature;
+import fight_game.choice.Choosable;
 import fight_game.interfaces.Descriptible;
 
-public abstract class Skills implements Descriptible {
+public abstract class Skills implements Descriptible, Choosable {
 
     protected int maxUses;
     protected String name;

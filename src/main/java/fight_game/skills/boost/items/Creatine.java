@@ -1,7 +1,7 @@
-package fight_game.boost.items;
+package fight_game.skills.boost.items;
 
 import fight_game.skills.SkillsType;
-import fight_game.boost.Boost;
+import fight_game.skills.boost.Boost;
 
 public class Creatine extends Boost {
 

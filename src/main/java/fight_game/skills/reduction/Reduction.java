@@ -1,4 +1,4 @@
-package fight_game.reduction;
+package fight_game.skills.reduction;
 
 import fight_game.creature.Creature;
 import fight_game.skills.SkillsType;

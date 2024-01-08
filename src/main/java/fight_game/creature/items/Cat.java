@@ -5,11 +5,12 @@ import fight_game.creature.Creature;
 public class Cat extends Creature {
 
     private int life = 9;
-    private int firstLifePoint = 100;
+    private int firstLifePoint;
 
 
     public Cat(String name, int lifePoint, int damage, int armor) {
         super(name, lifePoint, damage, armor);
+        firstLifePoint = lifePoint;
     }
 
     public String toString() {
